@@ -1,0 +1,224 @@
+# Default Dwarves vs Zombies config.yml
+# To configure Dwarf classes look into classes.yml
+# To configure Monster classes look into monsters.yml
+# To configure Dragon/Attacks look into dragons.yml
+# To configure Specialitems look into items.yml
+# To configure Blockdrops look into blocks.yml
+# ----------------------------------------------------------------------------------
+
+# ----------------------------------------------------------------------------------
+# Game config(0=disabled, 1=old/standart dvz, 2=newer dvz, 3=alternating) (this description is for the default configs)
+# ----------------------------------------------------------------------------------
+game0: 1
+game1: 0
+game2: 0
+game3: 0
+game4: 0
+game5: 0
+game6: 0
+game7: 0
+game8: 0
+game9: 0
+
+# ----------------------------------------------------------------------------------
+# Commands(Lists, do NOT include the beginning /)
+# ----------------------------------------------------------------------------------
+# Example:
+# commands_onEnd:
+# - "say A game has been finished!"
+commands_onStart: []
+commands_onEnd: []
+# In this commands "-0-" will get by the Players name
+commands_onJoin: 
+  - "siReward -0- reset"
+
+# ----------------------------------------------------------------------------------
+# Misc
+# ----------------------------------------------------------------------------------
+friendly_fire: false
+# No PvP around Spawn(Range) 0=disabled
+spawn_nopvp: 0
+# crystal chest is no longer a global config option, but a custom item
+autoadd_players: false
+# automatically join a game when joining the server
+autojoin_on_join: true
+# Automatically add all Players again when a game ends
+auto_rejoin: false
+monster_invulnarable: 30
+monster_suizidepill: true
+set_to_day: true
+# Only diable the check if you have disguisecraft installed, but it somehow doesn't detect it.
+disable_dcraft_check: false
+# Warning! Some texts are also located in the other .yml files
+language: en_EN
+world_prefix: DvZ_
+new_classselection: false
+# Chat messages by Players in a game can only be seen by Players in the same game or OPs
+dedicated_chat: true
+change_death_message: true
+# Hide leave and Join messages from ingame players
+hide_join_leave: false
+# when no gameid is given on /dvz_join it will try to join a not running game
+join_free_game: true
+# Track some stats on items(currently only monsters killed)
+item_stats: true
+global_stats: true
+# WARNING: when this is enabled, Players can only see their real exp when opening an inventory(other than their normal one)
+always_show_stats: false
+scoreboard_timer_seconds: false
+show_monument_bar: true
+
+show_game_id: true
+show_andre111_tag: true
+# Size of the global storage (9, 18, 27, 36, 45)
+globalstorage: 27
+privatestorage: 27
+
+# Monster have to wait until Assasins are choosen or /dvz_release was used
+need_release: false
+# Time(in Minutes) until monsters are released(0=disabled - WARNING: if you have need_release=true and time_release=0 you HAVE TO use /dvz_release or the monsters cann't do anything)
+time_release: 20
+# Can the dwarves win 
+can_win: false
+# After which ammount of minutes should the dwarves win? - starts counting after monsterrelease
+time_win: 20
+# In this time dwarves can take no damage(in minutes)
+time_grace: 5
+
+# Tickdelay between teleporting players at gamestart
+# If it laggs to badly try setting this to 2
+delayed_teleporation: 0
+
+# Check for updates automatically
+updateCheck: true
+
+# ----------------------------------------------------------------------------------
+# Lobby/Autostarting the Game
+# ----------------------------------------------------------------------------------
+# Whether to use a new world for the Lobby
+use_lobby: true
+# Players needed to automatically start the game(0 to disable)
+lobby_players: 20
+lobby_starttime: 60
+# 0=no assasins
+lobby_playerperassasin: 10
+# Minutes until assasins "spawn"
+lobby_assasintime: 20
+# Max Deaths -> More Deaths -> No Assasins(0 to disable)
+lobby_assasindeath: 2
+# Enable voting for maps
+lobby_voting: false
+
+# ----------------------------------------------------------------------------------
+# Highscore
+# ----------------------------------------------------------------------------------
+hscore_in_lobby: true
+hscore_win: 20
+hscore_loose_monument: -5
+hscore_loose_distance: -1
+# Maximum distance from monument, before getting teleported back
+# and points substracted
+max_monument_distance: 200
+# Time in seconds to get back
+max_monument_counter: 10
+
+# ----------------------------------------------------------------------------------
+# Spell wait times
+# ----------------------------------------------------------------------------------
+spelltime_teleport: 15
+
+# ----------------------------------------------------------------------------------
+# Disabled Items to craft(ID) - List
+# ----------------------------------------------------------------------------------
+disables_crafts:
+  - 298
+  - 299
+  - 300
+  - 301
+  - 302
+  - 303
+  - 304
+  - 305
+  - 306
+  - 307
+  - 308
+  - 309
+  - 310
+  - 311
+  - 312
+  - 313
+  - 314
+  - 315
+  - 316
+  - 317
+  - 267
+  - 268
+  - 272
+  - 276
+  - 283
+
+disables_crafts_type2:
+  - 298
+  - 299
+  - 300
+  - 301
+  - 302
+  - 303
+  - 304
+  - 305
+  - 306
+  - 307
+  - 308
+  - 309
+  - 310
+  - 311
+  - 312
+  - 313
+  - 314
+  - 315
+  - 316
+  - 317
+  - 267
+  - 268
+  - 272
+  - 276
+  - 283
+  - 5
+  - 29
+  - 33
+  - 35
+  - 50
+  - 53
+  - 57
+  - 69
+  - 76
+  - 85
+  - 89
+  - 107
+  - 126
+  - 256
+  - 257
+  - 258
+  - 261
+  - 262
+  - 269
+  - 270
+  - 271
+  - 273
+  - 274
+  - 275
+  - 277
+  - 278
+  - 279
+  - 280
+  - 284
+  - 285
+  - 286
+  - 290
+  - 291
+  - 292
+  - 293
+  - 294
+  - 351
+  - 354
+  - 355

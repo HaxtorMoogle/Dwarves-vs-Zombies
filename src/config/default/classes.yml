@@ -1,0 +1,342 @@
+effects:
+   lightlevel:
+      above: []
+      below:
+        6: "15 0" 
+   kill:
+      enabled: true
+      duration: 3
+      particles: true
+
+# ----------------------------------------------------------------------------------
+# Custom Dwarves
+# ----------------------------------------------------------------------------------
+# Item Format:
+# id_OR_customItemName:<damagevalue> <min_count>:<max_count> <chance_to_get_item> <enchant1_id_OR_customEnchantmentName>:<enchant1_level>,... <name>,<lore1>,<lore2>,<lore3>
+# Name and Lore1,2,3 can contain spaces
+# to get Names without enchantments use -1 as the enchantmentid(ignoring it)
+# or use -10 to only get the glowing effect
+# Example: "257 1 100 -1:0 Hi i'm Named!,I also have a lore!,2,3"
+# WARNING: Do not change name or lore of custom Items or they will not work!
+# ----------------------------------------------------------------------------------
+
+# transmuteRightClick and transmuteBlockBreak format:
+# 
+# "blockIdAbove;blockIdBelow;itemId:data;blockid:data;soundname_or-1:volume;item1;item2;..."
+# blockIdAbove;blockIdBelow are the blocks the house ust be build of and the player standing in
+
+# pistion change format:
+# "blockIdAbove blockIdBelow blockID:Data targetID:data
+
+# gameType:
+######################################
+# On which game should the class be availabe
+# 0: All
+# 1: Gametype 1
+# 2: Gametype 2
+######################################
+
+# disabledDamage:
+######################################
+# List of Damagesources to disable for the monster
+# currently available: 
+# contact(Cactus),drown,explosion,fall,fire,lava,poison,starve,wither
+# If you miss one just write a comment on the dev.bukkit page
+######################################
+
+dwarves:
+   0: 
+      name: "lang:string_default_builder"
+      chatPrefix: ""
+      chatSuffix: "lang:string_default_builder_suf"
+      gameType: 1
+      classItem: 2256
+      classItemDamage: 0
+      classChance: 100
+      items: 
+         - "internBuilderBook 1 100 -10:0"
+         - "257 1"
+         - "256 1"
+         - "258 1"
+         - "320 20"
+         - "298 1"
+         - "299 1"
+         - "300 1"
+         - "301 1"
+      crystalItems: []
+      effects: []
+      damageBuff: 1
+      disabledDamage: []
+      manaMax: 100
+      manaRegen: 5
+      startHealth: 20
+      startHunger: 20
+      startSaturation: 20
+      startMessage: ""
+      piston:
+         enable: false
+         change: []
+      specialitems:
+         transmuteRightClick: []
+         transmuteBlockBreak: []
+      rewardOnBuild: true
+   1: 
+      name: "lang:string_default_alchemy"
+      chatPrefix: ""
+      chatSuffix: "lang:string_default_alchemy_suf"
+      gameType: 1
+      classItem: 2257
+      classItemDamage: 0
+      classChance: 20
+      items: 
+         - "internAlchemyBook 1 100 -10:0"
+         - "379 2"
+         - "380 2"
+         - "54 2"
+         - "331 5"
+         - "22 64"
+         - "20 64"
+      crystalItems: []
+      effects: []
+      damageBuff: 1
+      disabledDamage: []
+      manaMax: 100
+      manaRegen: 5
+      startHealth: 20
+      startHunger: 20
+      startSaturation: 20
+      startMessage: ""
+      piston:
+         enable: false
+         change: []
+      specialitems:
+         transmuteRightClick: []
+         transmuteBlockBreak: []
+      rewardOnBuild: false
+   2: 
+      name: "lang:string_default_blacksmith"
+      chatPrefix: ""
+      chatSuffix: "lang:string_default_blacksmith_suf"
+      gameType: 1
+      classItem: 2258
+      classItemDamage: 0
+      classChance: 20
+      items: 
+         - "internBlacksmithBook 1 100 -10:0"
+         - "257 1"
+         - "74 8"
+         - "14 24"
+         - "61 2"
+         - "263 10"
+         - "349 10"
+         - "54 2"
+         - "112 64"
+      crystalItems: []
+      effects: []
+      damageBuff: 1
+      disabledDamage: []
+      manaMax: 100
+      manaRegen: 5
+      startHealth: 20
+      startHunger: 20
+      startSaturation: 20
+      startMessage: ""
+      piston:
+         enable: false
+         change: []
+      specialitems:
+         transmuteRightClick: []
+         transmuteBlockBreak: []
+      rewardOnBuild: false
+   3: 
+      name: "lang:string_default_tailor"
+      chatPrefix: ""
+      chatSuffix: "lang:string_default_tailor_suf"
+      gameType: 1
+      classItem: 2259
+      classItemDamage: 0
+      classChance: 20
+      items: 
+         - "internTailorBook 1 100 -10:0"
+         - "293 1"
+         - "352 10"
+         - "295 30"
+         - "6:3 6"
+         - "325 1"
+         - "101 64"
+         - "50 32"
+         - "54 2"
+      crystalItems: []
+      effects: []
+      damageBuff: 1
+      disabledDamage: []
+      manaMax: 100
+      manaRegen: 5
+      startHealth: 20
+      startHunger: 20
+      startSaturation: 20
+      startMessage: ""
+      piston:
+         enable: false
+         change: []
+      specialitems:
+         transmuteRightClick: []
+         transmuteBlockBreak: []
+      rewardOnBuild: false
+   4: 
+      name: "lang:string_default_newbuilder"
+      chatPrefix: ""
+      chatSuffix: "lang:string_default_newbuilder_suf"
+      gameType: 2
+      classItem: 2260
+      classItemDamage: 0
+      classChance: 100
+      items: 
+         - "278 1"
+         - "277 1"
+         - "crystalPerPlayer 1 100 -10:0"
+      crystalItems:
+         - "internDwarfSword"
+         - "internDwarfBow 1 100 48:7"
+         - "internDwarfPotion"
+         - "65 64"
+      effects: []
+      damageBuff: 1
+      disabledDamage: []
+      manaMax: 1000
+      manaRegen: 5
+      startHealth: 20
+      startHunger: 20
+      startSaturation: 20
+      startMessage: ""
+      piston:
+         enable: true
+         change:
+            - "155 155 5 53"
+            - "155 155 53 126"
+            - "155 155 126 85"
+            - "155 155 85 35:12"
+            - "155 155 35:12 35:7"
+            - "155 155 35:7 35:8"
+      specialitems:
+         transmuteRightClick: 
+            # - "112;112;348:0;51:-1;-1;371:0 1 50" its in transmuteBlockBreak now
+            - "112;112;371:0;34:9;ANVIL_LAND:0.2;351:14 1 25"
+            - "112;112;351:14;118:3;SWIM:0.2;266:0 1 75"
+            - "112;112;266:0;29:1;ANVIL_LAND:0.2;264 1 100 -1:0 Armor"
+            - "112;112;263:0;34:9;ANVIL_LAND:0.2;259:0"
+         transmuteBlockBreak:
+            - "112;112;348:0;51:-1;-1;371:0 1 50"
+      rewardOnBuild: false
+   5: 
+      name: "lang:string_default_newlumberjack"
+      chatPrefix: ""
+      chatSuffix: "lang:string_default_newlumberjack_suf"
+      gameType: 2
+      classItem: 2261
+      classItemDamage: 0
+      classChance: 20
+      items: 
+         - "278 1"
+         - "277 1"
+         - "279 1"
+         - "155 64"
+         - "29 3"
+         - "69 1"
+         - "crystalPerPlayer 1 100 -10:0"
+      crystalItems:
+         - "internDwarfSword"
+         - "internDwarfBow 1 100 48:7"
+         - "internDwarfPotion"
+         - "65 64"
+      effects: []
+      damageBuff: 1
+      disabledDamage: []
+      manaMax: 1000
+      manaRegen: 5
+      startHealth: 20
+      startHunger: 20
+      startSaturation: 20
+      startMessage: ""
+      piston:
+         enable: true
+         change:
+            - "155 155 5 53"
+            - "155 155 53 126"
+            - "155 155 126 85"
+            - "155 155 85 35:12"
+            - "155 155 35:12 35:7"
+            - "155 155 35:7 35:8"
+      specialitems:
+         transmuteRightClick: 
+            # - "112;112;348:0;51:-1;-1;371:0 1 50" its in transmuteBlockBreak now
+            - "112;112;371:0;34:9;ANVIL_LAND:0.2;351:14 1 25"
+            - "112;112;351:14;118:3;SWIM:0.2;266:0 1 75"
+            - "112;112;266:0;29:1;ANVIL_LAND:0.2;264 1 100 -1:0 Armor"
+            - "112;112;263:0;34:9;ANVIL_LAND:0.2;259:0"
+         transmuteBlockBreak:
+            - "112;112;348:0;51:-1;-1;371:0 1 50"
+      rewardOnBuild: false
+   7: 
+      name: "lang:string_default_newblacksmith"
+      chatPrefix: ""
+      chatSuffix: "lang:string_default_newblacksmith_suf"
+      gameType: 2
+      classItem: 2262
+      classItemDamage: 0
+      classChance: 20
+      items: 
+         - "278 1"
+         - "277 1"
+         - "112 64"
+         - "380 1"
+         - "325 1"
+         - "29 1"
+         - "69 1"
+         - "crystalPerPlayer 1 100 -10:0"
+      crystalItems:
+         - "internDwarfSword"
+         - "internDwarfBow 1 100 48:7"
+         - "internDwarfPotion"
+         - "65 64"
+      effects: []
+      damageBuff: 1
+      disabledDamage: []
+      manaMax: 1000
+      manaRegen: 5
+      startHealth: 20
+      startHunger: 20
+      startSaturation: 20
+      startMessage: ""
+      piston:
+         enable: true
+         change:
+            - "155 155 5 53"
+            - "155 155 53 126"
+            - "155 155 126 85"
+            - "155 155 85 35:12"
+            - "155 155 35:12 35:7"
+            - "155 155 35:7 35:8"
+      specialitems:
+         transmuteRightClick: 
+            # - "112;112;348:0;51:-1;-1;371:0 1 50" its in transmuteBlockBreak now
+            - "112;112;371:0;34:9;ANVIL_LAND:0.2;351:14 1 25"
+            - "112;112;351:14;118:3;SWIM:0.2;266:0 1 75"
+            - "112;112;266:0;29:1;ANVIL_LAND:0.2;264 1 100 -1:0 Armor"
+            - "112;112;263:0;34:9;ANVIL_LAND:0.2;259:0"
+         transmuteBlockBreak:
+            - "112;112;348:0;51:-1;-1;371:0 1 50"
+      rewardOnBuild: false
+
+ # Assasin
+# If the Assasin doesn't kill someone in this Time, he will die (0 to disable)
+assasin_time_minutes: 5
+assasin_items: 
+   - "276"
+   - "310"
+   - "311"
+   - "312"
+   - "313"
+   - "322"
+assassin_prefix: ""
+assassin_suffix: "lang:string_default_assassin_suf"
