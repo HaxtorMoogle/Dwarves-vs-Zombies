@@ -11,7 +11,7 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 public class DwarfSpawnCommand extends DvZCommand {
-	//Set the Dwarf Spawnpoint
+	//Set the Dwarf Spawn point
 	public DwarfSpawnCommand(String name) {
 		super(name);
 	}

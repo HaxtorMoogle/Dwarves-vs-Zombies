@@ -109,7 +109,7 @@ public class Item3DHandler {
 		}
 	}
 	
-	//TODO - respawn them when the cunk reloads
+	//TODO - respawn them when the chunk reloads
 	//respawn all fake zombies
 	public void respawnAll(Player player) {
 		for(Integer eid : entityIDs) {
@@ -154,7 +154,7 @@ public class Item3DHandler {
 	}
 
 	//Spawn a zombie
-	//TODO: Update to new methoods
+	//TODO: Update to new methods
 	
 	private void sendPacket(Player p, String world, int x, int y, int z, byte rotation, int entityID, int itemID) {
 		//world check
