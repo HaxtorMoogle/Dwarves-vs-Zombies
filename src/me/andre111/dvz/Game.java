@@ -132,9 +132,12 @@ public class Game
     // lobby
     private int lobby_Player;
 
-    // #######################################
-    // New Game
-    // #######################################
+
+    /**
+     * New Game
+     * @param p
+     * @param type
+     */
     public Game(DvZ p, int type)
     {
         gameType = type;
@@ -179,11 +182,18 @@ public class Game
         initLobby();
     }
 
+    /**
+     * Initialize the lobby
+     */
     public void initLobby()
     {
         lobby_Player = plugin.getConfig().getInt("lobby_players", 20);
     }
 
+    /**
+     * Start something
+     * @param time
+     */
     public void start(int time)
     {
         DVZGameStartEvent event = new DVZGameStartEvent(this);
@@ -214,6 +224,10 @@ public class Game
         }
     }
 
+    /**
+     * I think this is for the reset command
+     * @param callEvent
+     */
     public void reset(boolean callEvent)
     {
         starting = false;
@@ -299,9 +313,10 @@ public class Game
         }
     }
 
-    // #######################################
-    // Tick for Count down
-    // #######################################
+
+    /*
+     * Tick for Countdown
+     */
     public void tick()
     {
         // Send Game status to players
@@ -539,6 +554,9 @@ public class Game
         }
     }
 
+    /**
+     * Update the high scores
+     */
     private void updateHighscore()
     {
         // High score
@@ -555,9 +573,10 @@ public class Game
         }
     }
 
-    // #######################################
-    // Tick for Count down
-    // #######################################
+
+    /**
+     *  Tick for Count down
+     */
     private void countdownTicker()
     {
         // save for concurrent modification
@@ -585,7 +604,9 @@ public class Game
         remove.clear();
     }
 
-    // fast ticker 20 times per second
+    /**
+     * fast ticker 20 times per second
+     */
     public void fastTick()
     {
         fastticker++;
@@ -705,6 +726,9 @@ public class Game
         }
     }
 
+    /**
+     * End some task?
+     */
     private void endTask()
     {
         Bukkit.getServer().getScheduler().cancelTask(taskid);
