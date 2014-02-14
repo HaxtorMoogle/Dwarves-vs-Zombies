@@ -213,7 +213,7 @@ public class BlockManager {
 		}
 	}
 	
-	//reload this configsection/file
+	//reload this configuration /file
 	public static void reload() {
 		gameType1_dwarf = new ArrayList<String>();
 		gameType1_monster = new ArrayList<String>();

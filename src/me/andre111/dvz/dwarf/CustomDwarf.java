@@ -237,14 +237,14 @@ public class CustomDwarf {
 							player.getWorld().dropItemNaturally(player.getLocation(), it);
 						}
 						
-						//substract item
+						//Subtract item
 						if(item.getAmount()-1<=0)
 							item.setTypeId(0);
 						else
 							item.setAmount(item.getAmount()-1);
 						inv.setItem(i, item);
 						
-						//update the invventory, because it is glitchy
+						//update the inventory, because it is glitchy
 						DvZ.updateInventory(player);
 						
 						//break for loop

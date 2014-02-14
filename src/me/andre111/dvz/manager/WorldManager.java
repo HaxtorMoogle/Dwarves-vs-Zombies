@@ -88,7 +88,7 @@ public abstract class WorldManager {
 				MultiverseHandler.deleteWorld(w);
 			}
 		
-			//do not register a task/delete the world on serverstop
+			//do not register a task/delete the world on server stop
 			if(!Bukkit.getPluginManager().isPluginEnabled(DvZ.instance)) return;
 			
 			Bukkit.getScheduler().scheduleSyncDelayedTask(DvZ.instance, new Runnable() {
@@ -137,7 +137,7 @@ public abstract class WorldManager {
 		}
 	}
 	
-	//TODO - Neue Main Welt generieren
+	//TODO - New Main World generation
 	private static Random mapRandom = new Random();
 	public static void newRandomMainWorld(final int id) {
 		ArrayList<String> new_worlds = getFittingWorlds(id);

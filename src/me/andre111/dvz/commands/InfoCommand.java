@@ -55,7 +55,7 @@ public class InfoCommand extends DvZCommand {
 				
 				int hours = 0;
 				int minutes = 0;
-				int seconds = game.getDauer();
+				int seconds = game.getDuration();
 				hours = (int)Math.floor(seconds/60.0/60.0);
 				minutes = (int)Math.floor((seconds-(hours*60*60))/60.0);
 				seconds = seconds-(minutes*60)-(hours*60*60);
