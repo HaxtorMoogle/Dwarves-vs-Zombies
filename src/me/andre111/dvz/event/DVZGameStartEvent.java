@@ -31,12 +31,10 @@ public class DVZGameStartEvent extends Event implements Cancellable {
 		return handlers;   
 	}
 
-	@Override
 	public boolean isCancelled() {
 		return isCancelled;
 	}
 
-	@Override
 	public void setCancelled(boolean flag) {
 		isCancelled = flag;
 	}

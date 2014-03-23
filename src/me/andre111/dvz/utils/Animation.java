@@ -35,7 +35,6 @@ public abstract class Animation implements Runnable {
 		return stopped;
 	}
 	
-	@Override
 	public final void run() {
 		onTick(++tick);
 	}

@@ -21,17 +21,14 @@ public class PlayerDragon implements Dragon {
 		this.player = pl.getName();
 	}
 
-	@Override
 	public Entity getEntity() {
 		return Bukkit.getServer().getPlayerExact(player);
 	}
 
-	@Override
 	public int getMana() {
 		return mana;
 	}
 
-	@Override
 	public void setMana(int manaNew) {
 		this.mana = manaNew;
 		if(this.mana<0) this.mana = 0;
@@ -39,17 +36,14 @@ public class PlayerDragon implements Dragon {
 		getPlayer().setLevel(this.mana);
 	}
 
-	@Override
 	public int getID() {
 		return dID;
 	}
 
-	@Override
 	public void setID(int id) {
 		dID = id;
 	}
 
-	@Override
 	public void init() {
 		Player player2 = getPlayer();
 		DragonCustom dc = DvZ.dragonAtManager.getDragon(dID);

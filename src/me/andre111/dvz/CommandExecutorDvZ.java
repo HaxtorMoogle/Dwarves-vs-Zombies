@@ -12,7 +12,6 @@ public class CommandExecutorDvZ implements CommandExecutor {
 		DvZCommand.initCommands();
 	}
 
-	@Override
 	public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
 		//trick to make /dvz start work like /dvz_start
 		if(command.getName().equalsIgnoreCase("dvz")) {

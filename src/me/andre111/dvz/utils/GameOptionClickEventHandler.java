@@ -11,6 +11,5 @@ public class GameOptionClickEventHandler implements OptionClickEventHandler {
 		this.game = game;
 	}
 	
-	@Override
 	public void onOptionClick(OptionClickEvent event) {}
 }

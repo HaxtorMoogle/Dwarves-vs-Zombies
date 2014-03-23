@@ -1231,7 +1231,6 @@ public class Game
             // Delay to let teleport get throug
             Bukkit.getServer().getScheduler().runTaskLater(plugin, new Runnable()
             {
-                @Override
                 public void run()
                 {
                     im.open(player);
@@ -1364,7 +1363,6 @@ public class Game
             // Delay to let teleport get throug
             Bukkit.getServer().getScheduler().runTaskLater(plugin, new Runnable()
             {
-                @Override
                 public void run()
                 {
                     icm.open(player);
@@ -2097,7 +2095,6 @@ public class Game
             {
                 private int ii = 0;
 
-                @Override
                 public void run()
                 {
                     if (ii >= rplayers.length) this.cancel();

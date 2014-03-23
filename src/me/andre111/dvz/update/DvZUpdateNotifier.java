@@ -13,7 +13,6 @@ public class DvZUpdateNotifier implements Runnable {
 		this.player = player;
 	}
 	
-	@Override
 	public void run() {
 		if (player.isOnline()) {
 			

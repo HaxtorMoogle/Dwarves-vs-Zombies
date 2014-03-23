@@ -19,14 +19,12 @@ import org.bukkit.event.Listener;
 public class DSystem_LibsDisguises implements DSystem, Listener {
 	private int nextID = Integer.MIN_VALUE;
 	
-	@Override
 	public void initListeners(DvZ plugin) {
 		DisguiseConfig.setHearSelfDisguise(true);
 		
 		plugin.getServer().getPluginManager().registerEvents(this, plugin);
 	}
 
-	@Override
 	public void disguiseP(Player player, DvZDisguiseType disguise) {
 		switch(disguise) {
 		case VILLAGER_ZOMBIE:
@@ -59,7 +57,6 @@ public class DSystem_LibsDisguises implements DSystem, Listener {
 	
 	//TODO: This is not future proof. Things will break next update
 	@SuppressWarnings("deprecation")
-	@Override
 	public void disguiseP(Player player, String disguise) {
 		EntityType et = EntityType.fromName(disguise);
 		if(et==null) et = EntityType.valueOf(disguise);
@@ -71,7 +68,6 @@ public class DSystem_LibsDisguises implements DSystem, Listener {
 		DisguiseAPI.disguiseToAll(player, new MobDisguise(DisguiseType.getType(et), true, true));
 	}
 
-	@Override
 	public void undisguiseP(Player player) {
 		DisguiseAPI.undisguiseToAll(player);
 	}
@@ -79,14 +75,12 @@ public class DSystem_LibsDisguises implements DSystem, Listener {
 	
 	//TODO: This is not future proof. Things will break next update
 	@SuppressWarnings("deprecation")
-	@Override
 	public void redisguiseP(Player player) {
 		Disguise dis = DisguiseAPI.getDisguise(player);
 		DisguiseAPI.undisguiseToAll(player);
 		DisguiseAPI.disguiseToAll(player, dis);
 	}
 
-	@Override
 	public int newEntityID() {
 		return nextID++;
 	}

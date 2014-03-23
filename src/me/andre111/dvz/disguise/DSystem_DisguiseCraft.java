@@ -21,7 +21,6 @@ public class DSystem_DisguiseCraft implements DSystem, Listener {
 	private DisguiseCraftAPI api;
 	private DvZ plugin;
 	
-	@Override
 	public void initListeners(DvZ p) {
 		this.plugin = p;
 		api = DisguiseCraft.getAPI();
@@ -29,7 +28,6 @@ public class DSystem_DisguiseCraft implements DSystem, Listener {
 		plugin.getServer().getPluginManager().registerEvents(this, plugin);
 	}
 	
-	@Override
 	public void disguiseP(Player player, DvZDisguiseType disguise) {
 		DisguiseType dt = DisguiseType.fromString(disguise.getNames().get(0));
 		Disguise dis = null;
@@ -168,7 +166,6 @@ public class DSystem_DisguiseCraft implements DSystem, Listener {
 		}
 		disguiseP(player, dis);
 	}
-	@Override
 	public void disguiseP(Player player, String disguise) {
 		DisguiseType dt = DisguiseType.fromString(disguise);
 		if(dt==null) {
@@ -185,12 +182,10 @@ public class DSystem_DisguiseCraft implements DSystem, Listener {
 		}
 	}
 
-	@Override
 	public void undisguiseP(Player player) {
 		if(api.isDisguised(player)) api.undisguisePlayer(player);
 	}
 
-	@Override
 	public void redisguiseP(Player player) {
 		if( api.isDisguised(player)) {
 			Disguise dg = api.getDisguise(player);
@@ -199,13 +194,12 @@ public class DSystem_DisguiseCraft implements DSystem, Listener {
 		}
 	}
 
-	@Override
 	public int newEntityID() {
 		return api.newEntityID();
 	}
 
 	
-	//rightclicking disguises
+	//right clicking disguises
 	@EventHandler
 	public void onPlayerInvalidInteractEntity(final PlayerInvalidInteractEvent event) {
 		if(plugin==null) {

@@ -25,14 +25,12 @@ public class DSystem_BeTheMob implements DSystem, Listener {
 	private DvZ plugin;
 	private int nextID = Integer.MIN_VALUE;
 	
-	@Override
 	public void initListeners(DvZ plugin) {
 		api = BeTheMob.getApi();
 
 		plugin.getServer().getPluginManager().registerEvents(this, plugin);
 	}
 	
-	@Override
 	public void disguiseP(Player player, DvZDisguiseType disguise) {
 		List<String> extras = new ArrayList<String>();
 		if(disguise.isBaby()) {
@@ -76,7 +74,6 @@ public class DSystem_BeTheMob implements DSystem, Listener {
 	
 	//TODO: Something going to break soon here
 	@SuppressWarnings("deprecation")
-	@Override
 	public void disguiseP(Player player, String disguise) {
 		EntityType et = EntityType.fromName(disguise);
 		if(et==null) et = EntityType.valueOf(disguise);
@@ -89,14 +86,12 @@ public class DSystem_BeTheMob implements DSystem, Listener {
 		api.addDisguise(player, dis);
 	}
 
-	@Override
 	public void undisguiseP(Player player) {
 		if(api.isDisguised(player)) {
 			api.removeDisguise(player);
 		}
 	}
 
-	@Override
 	public void redisguiseP(Player player) {
 		if(api.isDisguised(player)) {
 			Disguise dis = api.getDisguise(player);
@@ -105,7 +100,6 @@ public class DSystem_BeTheMob implements DSystem, Listener {
 		}
 	}
 
-	@Override
 	public int newEntityID() {
 		return nextID++;
 	}

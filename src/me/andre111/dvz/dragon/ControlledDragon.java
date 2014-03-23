@@ -98,30 +98,24 @@ public class ControlledDragon implements Dragon {
 	}
 
 	//TODO - Dragon Methods
-	@Override
 	public Entity getEntity() {
 		return null;
 	}
 
-	@Override
 	public int getMana() {
 		return 0;
 	}
 
-	@Override
 	public void setMana(int mana) {
 	}
 
-	@Override
 	public int getID() {
 		return 0;
 	}
 
-	@Override
 	public void setID(int id) {
 	}
 
-	@Override
 	public void init() {
 	}
 }
